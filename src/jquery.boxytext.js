@@ -43,8 +43,7 @@
     		    width: null
   		  },
   		  styles: {
-    		    'font-size' : null,
-    		    'line-height' : null
+    		    'font-size' : null
   		  },
 
 				init: function () {
@@ -63,25 +62,9 @@
 					      this.settings.width : $el.outerWidth();
 
 			      // update line height if nothing was supplied to use current element line height
-			      if (this.settings.lineHeight === null) {
-  			        var lineHeight = $el.css('line-height');
-  			        var fontSize = parseInt($el.css('font-size').replace('px', ''), 10);
-  			        // handle line height in pixel format
-  			        if (lineHeight.indexOf('px') > 0) {
-    			          this.settings.lineHeight = parseFloat(lineHeight, 10) / fontSize;
-			          // handle line height as percentage
-  			        } else if (lineHeight.indexOf('%') > 0) {
-    			          this.settings.lineHeight = parseFloat(lineHeight, 10) / 100;
-			          // handle "normal" or "initial" or something that's not a number
-			          // so let's use the browser default of 1.2
-  			        } else if (isNaN(lineHeight)) {
-    			          this.settings.lineHeight = 1.2;
-			          // all that's left are normal numbers
-  			        } else {
-    			          this.settings.lineHeight = parseFloat(lineHeight, 10);
-  			        }
-			      }
-			      this.styles['line-height'] = this.settings.lineHeight;
+			      if (this.settings.lineHeight) {
+  			        this.styles['line-height'] = this.settings.lineHeight;
+		        }
 
 			      if ($el.find('.' + this.settings.wrapperClass).length < 1) {
   			        $el.wrapInner('<div class="' + this.settings.wrapperClass + '">');
