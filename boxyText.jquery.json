@@ -1,0 +1,38 @@
+{
+	"name": "boxyText",
+	"title": "jQuery BoxyText",
+	"description": "Fit text into an element with a given height and width with the largest font size possible.",
+	"keywords": [
+		"jquery",
+		"text",
+		"font-size",
+		"typography",
+		"plugins"
+	],
+	"version": "0.1",
+	"author": {
+		"name": "Jon Jandoc",
+		"email": "jon.jandoc@gmail.com",
+		"url": "https://github.com/jjandoc"
+	},
+	"maintainers": [
+		{
+		"name": "Jon Jandoc",
+		"email": "jon.jandoc@gmail.com",
+		"url": "https://github.com/jjandoc"
+		}
+	],
+	"licenses": [
+		{
+			"type": "MIT",
+			"url": "http://zenorocha.mit-license.org/"
+		}
+	],
+	"bugs": "https://github.com/jjandoc/jquery-boxy-text/issues",
+	"homepage": "https://github.com/jjandoc/jquery-boxy-text",
+	"docs": "https://github.com/jjandoc/jquery-boxy-text#readme",
+	"download": "https://github.com/jjandoc/jquery-boxy-text/archive/master.zip",
+	"dependencies": {
+		"jquery": ">=1.4"
+	}
+}

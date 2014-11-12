@@ -1,9 +1,9 @@
 /*
- *  jQuery Boilerplate - v3.3.4
- *  A jump-start for jQuery plugins development.
- *  http://jqueryboilerplate.com
+ *  jQuery BoxyText - v0.1
+ *  Fit text into an element with a given height and width with the largest font size possible.
+ *  https://github.com/jjandoc/jquery-boxy-text
  *
- *  Made by Zeno Rocha
+ *  Made by Jon Jandoc
  *  Under MIT License
  */
 // the semi-colon before function invocation is a safety net against concatenated
@@ -153,11 +153,8 @@
     				    this.setStyle();
     				    this.updateState();
     				    var comparison = this.compareSize();
-    				    if (comparison === 'smaller') {
-      				      // too small, bring it back up a notch and we're done
-      				      this.styles['font-size'] = currentFontSize + 'px';
-      				      this.setStyle();
-    				    } else {
+    				    if (comparison === 'larger') {
+      				      // still too big, get smaller.
       				      this.state.fontSize = newFontSize;
       				      this.sizeDown();
     				    }
