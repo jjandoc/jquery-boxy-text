@@ -145,11 +145,8 @@
     				    this.setStyle();
     				    this.updateState();
     				    var comparison = this.compareSize();
-    				    if (comparison === 'smaller') {
-      				      // too small, bring it back up a notch and we're done
-      				      this.styles['font-size'] = currentFontSize + 'px';
-      				      this.setStyle();
-    				    } else {
+    				    if (comparison === 'larger') {
+      				      // still too big, get smaller.
       				      this.state.fontSize = newFontSize;
       				      this.sizeDown();
     				    }
