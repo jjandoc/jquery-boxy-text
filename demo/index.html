@@ -3,15 +3,20 @@
 	<head>
 		<title>jQuery Boilerplate</title>
 		<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
-		<script src="../src/jquery.boilerplate.js"></script>
+		<script src="../src/jquery.boxytext.js"></script>
+		<style>
+		  #element {
+  		  background: grey;
+		    height: 400px;
+  		  width: 400px;
+		  }
+    </style>
 	</head>
 	<body>
-		<div id="element"></div>
+		<div id="element">This is some text.</div>
 		<script>
 			$(function() {
-				$("#element").defaultPluginName({
-					propertyName: "a custom value"
-				});
+				$("#element").boxyText();
 			});
 		</script>
 	</body>
